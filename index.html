@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Webdemo</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .profile-img {
+            max-width: 50%;
+            height: 50%;
+            border-radius: 50%;
+            display: block;
+            margin: 50px auto;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-3">Website demo</h1>
+            <p class="lead">Từng bước thực hiện website</p>
+            <hr class="my-2">
+            <nav class="navbar navbar-expand-sm navbar-light bg-light">
+                <a class="navbar-brand" href="#">Logo</a>
+                <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                    data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Quản lý thành viên</a>
+                        </li>
+
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-4">
+                <img src="https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/236750408_2977951539117274_398639779791776582_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHJmzqKtXxPO9lNbVhWV4iInyQ3NNxts7GfJDc03G2zscUNks7Kbpj4RPmqYQerdVT2udDq-ugLHZsvYodXEF3f&_nc_ohc=zQwAGT28L1EAX-ppx5L&_nc_ht=scontent.fsgn5-9.fna&oh=00_AfDzlclXxuL0znxiFRvg6IpdKQY86QaSTuvxB1FQeSokyg&oe=66069E38"
+                    alt="Hình ảnh" class="profile-img">
+            </div>
+
+            <div class="col-md-8">
+
+                <p><b>Họ tên:</b> Hồ Tấn Thứ</p>
+                <p><b>Lớp:</b> DT21TT887</p>
+                <p><b>MSSV:</b> 170121609</p>
+                <p><b>Email:</b> hotanthu0914@gmail.com</p>
+                <p><b>Địa chỉ:</b> Phường 1, TP Bạc Liêu, Bạc Liêu.</p>
+                <p><b>Công việc:</b> Bộ đội</p>
+                <p><b>Sở thích:</b> Du lịch, nghe nhạc</p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="card-columns">
+            <div class="card">
+                <img class="card-img-top" src="holder.js/100x180/" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">Form đăng ký</h4>
+                    <form action="" method="post" name="dk" onsubmit="return validateForm()">
+                        <div class="form-group">
+                            <label for="us">Username</label>
+                            <input type="text" class="form-control" name="txtusername" id="txtusername"
+                                aria-describedby="helpId" placeholder="Nhập Username" required>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="ps">Password</label>
+                            <input type="password" class="form-control" name="txtpassword" id="txtpassword"
+                                aria-describedby="helpId" placeholder="Nhập mật khẩu" required>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="rps">RePassword</label>
+                            <input type="password" class="form-control" name="txtrepassword" id="txtrepassword"
+                                aria-describedby="helpId" placeholder="Nhập lại mật khẩu" required>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="text" class="form-control" name="txtemail" id="txtemail"
+                                aria-describedby="helpId" placeholder="Nhập vào email" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Đăng ký</button>
+                    </form>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="holder.js/100x180/" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">Danh sách thành viên</h4>
+                    <p class="card-text">
+                    <table id="danh-sach-thanh-vien" class="table">
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>Username</th>
+                                <th>Email</th>
+                                <th>Xóa</th>
+                                <th>Sửa</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                
+                            <!-- Dữ liệu sẽ được thêm vào đây -->
+                        </tbody>
+                    </table>
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="update-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Chỉnh sửa thông tin</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="card">
+                        <img class="card-img-top" src="holder.js/100x180/" alt="">
+                        <div class="card-body">
+
+                            <form action="" method="post" name="dk" onsubmit="return submitUpdateForm()">
+                                <input type="hidden" class="form-control" name="txtRowIndex" id="txtRowIndex"
+                                    aria-describedby="helpId">
+                                <div class="form-group">
+
+                                    <label for="us">Username</label>
+                                    <input type="text" class="form-control" name="txtUpdateUsername"
+                                        id="txtUpdateUsername" aria-describedby="helpId" placeholder="Nhập Username"
+                                        required>
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="text" class="form-control" name="txtUpdateEmail" id="txtUpdateEmail"
+                                        aria-describedby="helpId" placeholder="Nhập vào email" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Chỉnh sửa</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="display: none;" class="modal-footer">
+                    <button id="close-update-modal" type="button" class="btn btn-secondary"
+                        data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var updateModalId = 'update-modal'
+        var closeUpdateModalButtonId = 'close-update-modal'
+        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        function validateForm() {
+            var password = document.getElementById("txtpassword").value;
+            var confirmPassword = document.getElementById("txtrepassword").value;
+            if (password != confirmPassword) {
+                alert("Mật khẩu không khớp!");
+                return false;
+            }
+            var username = document.getElementById("txtusername").value;
+            var email = document.getElementById("txtemail").value;
+
+
+            if (!emailPattern.test(email)) {
+                alert("Vui lòng nhập địa chỉ email hợp lệ!");
+                return false;
+            }
+
+            var table = document.getElementById("danh-sach-thanh-vien").getElementsByTagName('tbody')[0];
+
+            var newRow = table.insertRow();
+            var cell1 = newRow.insertCell(0);
+            var cell2 = newRow.insertCell(1);
+            var cell3 = newRow.insertCell(2);
+            var cell4 = newRow.insertCell(3); // Ô cột mới cho nút xóa
+            var cell5 = newRow.insertCell(4); // Ô cột mới cho nút xóa
+
+            cell1.innerHTML = table.rows.length;
+            cell2.innerHTML = username;
+            cell3.innerHTML = email;
+            cell4.innerHTML = '<button onclick="xoaDong(this)">Xóa</button>';
+            cell5.innerHTML = `<button type="button" data-toggle="modal" data-target="#${updateModalId}" onclick="extractRowDataAndSetDataToUpdateForm(this)">Sửa</button>`;
+
+            document.getElementById("txtusername").value = "";
+            document.getElementById("txtemail").value = "";
+            document.getElementById("txtpassword").value = "";
+            document.getElementById("txtrepassword").value = "";
+
+            alert("Thêm dữ liệu thành công!");
+
+            return false; // Ngăn form submit để không load lại trang
+        }
+
+        function xoaDong(button) {
+            //tr
+            var row = button.parentNode.parentNode; // Dòng chứa nút xóa
+            //table
+            var table = row.parentNode.parentNode; // Bảng chứa dòng
+
+            const result = confirm('Bạn có chắc muốn xóa dữ liệu này không?')
+            if (result) {
+                table.deleteRow(row.rowIndex); // Xóa dòng từ bảng
+                alert("Xóa dữ liệu thành công!");
+            }
+        }
+
+        function extractRowDataAndSetDataToUpdateForm(button) {
+            const row = button.parentNode.parentNode;
+            const currentUserName = row.cells[1].innerHTML;
+            const currentEmail = row.cells[2].innerHTML;
+            const currentRowindex = row.rowIndex;
+
+            document.getElementById("txtUpdateUsername").value = currentUserName;
+            document.getElementById("txtUpdateEmail").value = currentEmail;
+            document.getElementById("txtRowIndex").value = currentRowindex;
+
+        }
+
+        function submitUpdateForm() {
+
+            //get value from form
+            var username = document.getElementById("txtUpdateUsername").value;
+            var email = document.getElementById("txtUpdateEmail").value;
+            var rowIndex = Number(document.getElementById("txtRowIndex").value)
+
+            //validation
+            if (!username?.trim()) {
+                alert('Vui lòng nhập username');
+                return false;
+            }
+
+            if (!emailPattern.test(email)) {
+                alert("Vui lòng nhập địa chỉ email hợp lệ!");
+                return false;
+            }
+
+            //update value in table
+            const table = document.getElementById("danh-sach-thanh-vien").getElementsByTagName('tbody')[0];
+            const row = table.rows[rowIndex - 1];
+            row.cells[1].innerHTML = username;
+            row.cells[2].innerHTML = email;
+
+            //close modal
+            document.getElementById(closeUpdateModalButtonId).click()
+
+            //success notification
+            alert("Thêm dữ liệu thành công!");
+            return false;
+        }
+
+    </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
